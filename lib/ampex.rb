@@ -13,7 +13,7 @@ else
   superclass = BlankSlate
 end
 
-class Metavariable < superclass
+class Metavariable # < superclass
   # When you pass an argument with & in ruby, you're actually calling #to_proc
   # on the object. So it's Symbol#to_proc that makes the &:to_s trick work,
   # and Metavariable#to_proc that makes &X work.
@@ -73,7 +73,8 @@ class Metavariable < superclass
                                 setAccessibilityViewIsModal: setIsAccessibilityElement: setNilValueForKey: setObservationInfo: setValue:forKey: setValue:forKeyPath: setValue:forUndefinedKey: setValuesForKeysWithDictionary:
                                 storedAccessibilityActivationPoint storedAccessibilityElementsHidden storedAccessibilityFrame storedAccessibilityTraits storedAccessibilityViewIsModal storedIsAccessibilityElement
                                 superclass to_proc unregisterForTimeMarkerNotifications validateValue:forKey:error: validateValue:forKeyPath:error: valueForKey: valueForKeyPath: valueForUndefinedKey:
-                                willChange:valuesAtIndexes:forKey: willChangeValueForKey: willChangeValueForKey:withSetMutation:usingObjects: zone).include? method.to_s
+                                willChange:valuesAtIndexes:forKey: willChangeValueForKey: willChangeValueForKey:withSetMutation:usingObjects: zone
+                                copyWithZone: object_id respond_to? respond_to?:).include? method.to_s
   end
 end
 
